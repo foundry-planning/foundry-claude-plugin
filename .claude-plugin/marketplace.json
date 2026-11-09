@@ -1,0 +1,16 @@
+{
+  "name": "foundry-planning",
+  "description": "Playbooks for running your advisory practice from Claude with Foundry Planning: weekly review, meeting prep, after the meeting, onboarding, tax return review, what-ifs, estate reviews and decks.",
+  "owner": {
+    "name": "Foundry Planning"
+  },
+  "plugins": [
+    {
+      "name": "foundry-planning",
+      "source": "./",
+      "description": "Playbooks for running your advisory practice from Claude with Foundry Planning: weekly review, meeting prep, after the meeting, onboarding, tax return review, what-ifs, estate reviews and decks.",
+      "version": "0.14.1",
+      "license": "MIT"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "foundry-planning": {
+      "type": "http",
+      "url": "https://app.foundryplanning.com/api/mcp"
+    }
+  }
+}

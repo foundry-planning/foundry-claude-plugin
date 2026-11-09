@@ -1,0 +1,10 @@
+{
+  "name": "foundry-planning",
+  "displayName": "Foundry Planning",
+  "version": "0.14.1",
+  "description": "Playbooks for running your advisory practice from Claude with Foundry Planning: weekly review, meeting prep, after the meeting, onboarding, tax return review, what-ifs, estate reviews and decks.",
+  "author": { "name": "Foundry Planning" },
+  "license": "MIT",
+  "homepage": "https://www.foundryplanning.com/docs/claude-connector",
+  "privacyPolicyUrl": "https://www.foundryplanning.com/legal/privacy"
+}
