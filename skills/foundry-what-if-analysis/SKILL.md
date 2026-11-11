@@ -63,7 +63,7 @@ Only when the advisor asks ("save that as a scenario"):
 1. Say which what-if you will save and the name you'll give it (up to 60 characters, such as "Retire at 62"). Wait for a yes.
 2. Save it: `save_what_if_as_scenario({ clientId, whatIfId, name })`, with that what-if's `whatIfId`. For a comparison, use the variation's id from `whatIfIds`.
    - It makes a new scenario and leaves the base plan and every other scenario alone. Give the advisor its `scenarioUrl`, which opens the Solver on it.
-   - It needs the firm's changes from Claude turned on. If it is refused, relay the refusal as written.
+   - It needs the firm's changes from AI assistants turned on. If it is refused, relay the refusal as written.
 3. A solve's answer isn't part of the what-if. To keep a solved value, run `compare_what_ifs` with one variation holding that value as a change, then save that `whatIfId`. For a solved age, that's a `retirement_age` change; for a solved spend, a `type: "spending_amount"` change.
 4. A what-if id lasts 24 hours. After that, run the what-if again.
 

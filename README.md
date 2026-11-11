@@ -1,15 +1,15 @@
 # Foundry Planning for Claude
 
-This plugin gives Claude the playbooks for running an advisory practice with Foundry Planning: the weekly review, meeting prep, logging a meeting afterward, onboarding a household, what-if analysis, estate reviews and client decks. The playbooks use the tools of Foundry's connector. The plugin names that connector but doesn't connect it: add the connector by its address, as Foundry's Settings → Connect Claude page shows. Connect Foundry once; if the plugin's Connectors tab also lists Foundry Planning, you don't need to connect it there as well.
+This plugin gives Claude the playbooks for running an advisory practice with Foundry Planning: the weekly review, meeting prep, logging a meeting afterward, onboarding a household, what-if analysis, estate reviews and client decks. The playbooks use the tools of Foundry's connector. The plugin names that connector but doesn't connect it: add the connector by its address, as Foundry's Settings → AI assistants page shows. Connect Foundry once; if the plugin's Connectors tab also lists Foundry Planning, you don't need to connect it there as well.
 
 ## Set up
 
-1. In Foundry, open Settings → Connect Claude. It shows the connector address and the steps for each Claude app.
+1. In Foundry, open Settings → AI assistants. It shows the connector address and the steps for each Claude app.
 2. Add the connector: in Claude, open Customize → Connectors, choose Add, then Add custom connector, paste the address, sign in to Foundry and pick your firm. (Claude Code loads the connector directly.)
 3. Open Customize → Plugins, choose Add, then Upload plugin, and pick the file you downloaded from that page. In Claude Code, install it instead with `/plugin install foundry-planning --marketplace foundry-planning/foundry-claude-plugin`.
 4. Turn on "Code execution and file creation" in Claude's Settings → Capabilities; the playbooks need it.
 
-Claude can read your households right away. Changes from Claude stay off until a firm admin turns them on under Settings → Connect Claude.
+Claude can read your households right away. Changes from AI assistants stay off until a firm admin turns them on under Settings → AI assistants.
 
 ## What is inside
 

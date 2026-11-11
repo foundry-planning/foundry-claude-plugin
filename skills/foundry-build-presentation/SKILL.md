@@ -64,7 +64,7 @@ Pages print with their standard settings. When the advisor asks for a change (a 
   - The preview screen shows the deck's pages. Don't count on it showing (`foundry-conventions`, In-chat screens).
   - `downloadUrl` is for the advisor only: it opens only for someone signed in to Foundry. Never give it to the client.
 
-Queuing a deck needs the firm's changes from Claude turned on, edit access to the household, and the plan linked to a household in Foundry's CRM. If it is refused, relay the refusal as written.
+Queuing a deck needs the firm's changes from AI assistants turned on, edit access to the household, and the plan linked to a household in Foundry's CRM. If it is refused, relay the refusal as written.
 
 Claude doesn't write or propose the Plan Story. If the advisor wants one, they build it on the household's Presentations screen in Foundry (the `foundryUrl` that `list_presentation_pages` returns).
 

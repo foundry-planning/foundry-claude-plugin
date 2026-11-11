@@ -53,4 +53,4 @@ Only for a household with a plan, only what the conversation settled, and only a
 - `title` up to 300 characters, `body` (your summary) up to 20,000, `occurredAt` the day of the conversation (a day, not a time), `attendees` up to 20 names.
 - `transcript`: the full pasted text, when there is one, up to 400,000 characters. Foundry files it in the household's "Transcripts" folder. Before you pass it, leave out any Social Security number and cut a full account number to its last 4 digits, and tell the advisor you did.
 - `followUpTasks`: up to 25, each with a `title` and, as needed, `description`, `dueDate` and `assigneeUserId` (a firm member's `userId` from `list_firm_members()`).
-- Logging needs the firm's changes from Claude turned on and edit access to the household. If it is refused, relay the refusal as written and tell the advisor the conversation isn't logged yet.
+- Logging needs the firm's changes from AI assistants turned on and edit access to the household. If it is refused, relay the refusal as written and tell the advisor the conversation isn't logged yet.

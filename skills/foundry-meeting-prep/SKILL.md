@@ -26,7 +26,7 @@ A brief for one household's meeting, written only from what Foundry returns, fil
 6. On a yes, file it: `save_document({ householdId, title, markdown, folderId })`, leaving out `folderId` for no folder. Foundry turns the markdown into a PDF named after `title` (up to 200 characters) and files it in the household's vault. Headings, lists, tables and quotes carry over; the markdown can be up to 200,000 characters. If Foundry answers that the document is too long to turn into a PDF in one go, offer to split it into two or more shorter documents, and file them only on a yes.
 7. Show back the `filename` and its `foundryUrl` (it opens for someone signed in to Foundry). Then, for a household with a plan, offer Foundry's standard deck.
 
-Filing the brief and building the deck need the firm's changes from Claude turned on. If either is refused (the firm's switch, billing, or the advisor's access to this household), relay the refusal as written and stop.
+Filing the brief and building the deck need the firm's changes from AI assistants turned on. If either is refused (the firm's switch, billing, or the advisor's access to this household), relay the refusal as written and stop.
 
 ## Foundry's standard deck
 

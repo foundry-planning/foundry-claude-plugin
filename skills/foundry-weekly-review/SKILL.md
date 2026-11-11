@@ -56,7 +56,7 @@ For "clean up my overdue tasks", "what's overdue for the Okafors?".
 
 ## Writing the changes
 
-Only what the advisor approved, in as few calls as it takes. Changes need the firm's changes from Claude turned on: if a call is refused, relay the refusal as written and stop.
+Only what the advisor approved, in as few calls as it takes. Changes need the firm's changes from AI assistants turned on: if a call is refused, relay the refusal as written and stop.
 
 - New tasks: `create_tasks({ tasks })`, one call for the batch. Each task takes a `title` and, as needed, `description`, `dueDate`, `householdId`, `assigneeUserId`, `priority` (`low`, `med` or `high`) and `tags` (labels; one the firm doesn't have yet is created). The batch is all or nothing.
 - Move, complete or reassign: `update_task({ updates })`. Each update takes the `taskId` and only the fields that change: `dueDate`, `status` (`done` completes it), `assigneeUserId`, `householdId`, `priority`, `addTags`, `removeTags`. `null` clears a date or an owner.
