@@ -27,9 +27,9 @@ Any deck shows a what-if only once it is saved as a scenario: a what-if lasts 24
 
 Propose, in this order:
 
-1. The `startingDeck`, all of it: every page is in unless the advisor says no.
+1. The `startingDeck`, all of it: every page is in unless the advisor says no. Its Plan Summary is the one page you always ask about.
 2. Then about 4 to 8 `suggested` pages that answer the advisor's request, each with its reason. Add pages the advisor names, or use a template they name.
-3. Show the titles in order, then wait for a yes.
+3. Show the titles in order, then ask: "Do you want a Plan Summary in this deck, a one-page note to the clients on what these pages mean together?" Wait for a yes on the pages and an answer on the summary.
 
 Leave out any page marked `needsSetupInFoundry`. Give a `needsScenario` page the scenario the advisor picks (`list_scenarios({ clientId })`), or leave it out. A deck can show at most 6 different scenarios, and at most 4 of them with Monte Carlo pages.
 
@@ -37,7 +37,7 @@ Apply the advisor's drops, adds and reorders, and show the list again before any
 
 ### 2. The Plan Summary
 
-The starting deck includes a Plan Summary page, a short note to the clients. Foundry prints exactly the text you pass. Write it like this:
+When the advisor wants a Plan Summary, write it on the Plan Summary page, never on a Blank Page. Foundry prints exactly the text you pass, checks its figures before every render, and lets the advisor refresh it in Foundry when the plan's numbers or the deck's pages change. Write it like this:
 
 1. Read each page that prints figures (not the Plan Summary itself): `get_report_page_data({ clientId, pageId, … })`, with the `scenarioId` and `options` it will print with. The summary is checked against the deck as set.
 2. Write to the clients by first name, in plain words, walking the deck in page order: one short `##` section per topic.
@@ -46,7 +46,7 @@ The starting deck includes a Plan Summary page, a short note to the clients. Fou
 5. Queue it: `generate_presentation({ clientId, pages, advisorFigures, … })`, with `pages` as `{ pageId }` in order (add `scenarioId` for a page given a scenario), and the Plan Summary's text in its own entry: `{ pageId: "planSummary", options: { markdown } }`. `advisorFigures` lists the advisor's own figures as they wrote them (at most 20, each up to 80 characters).
 6. If it is refused, the refusal names the figures that no page prints. Fix those (use the deck's own figure, or leave it out, or confirm it with the advisor and add it to `advisorFigures`), show the text again and wait for a yes.
 
-Without a Plan Summary, leave the page out. A template deck is queued as it is: `generate_presentation({ clientId, templateId, … })`.
+When the advisor doesn't want one, leave the page out. A template deck is queued as it is: `generate_presentation({ clientId, templateId, … })`.
 
 `scenarioId` sets the whole deck's scenario (the base case when left out). `title` (up to 100 characters) becomes the file name. The result has a `runId`; pass on any `notes` it returns before the advisor shares the deck.
 
@@ -61,6 +61,7 @@ Pages print with their standard settings. When the advisor asks for a change (a 
 - `failed` gives an `error`: relay it.
 - `done` gives `downloadUrl`, `pageCount`, `sheetCheck` and `sheetNote`.
   - Relay `sheetNote` before the advisor shares the deck. It says whether the sheets printed match the sheets planned.
+  - When the deck has a Plan Summary, tell the advisor once how to bring it up to date after the numbers or pages change: on the household's Presentations screen, load the deck's pages from Recent runs, open the Plan Summary's Options and click Refresh summary.
   - The preview screen shows the deck's pages. Don't count on it showing (`foundry-conventions`, In-chat screens).
   - `downloadUrl` is for the advisor only: it opens only for someone signed in to Foundry. Never give it to the client.
 
